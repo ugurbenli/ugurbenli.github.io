@@ -7,7 +7,7 @@ subtitle: İstediğiniz anahtar kelimelerle site içerisinde arama yapabilirsini
 <div>
     <script>
     (function() {
-        var cx = '017722793365804148012:xyeb_c8pjai';
+        var cx = '011090940582819302398:sxarqhwzfrq';
         var gcse = document.createElement('script');
         gcse.type = 'text/javascript';
         gcse.async = true;

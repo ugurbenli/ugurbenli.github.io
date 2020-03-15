@@ -16,6 +16,7 @@ Aşağıda yer alan hesap bilgilerimle iletişime geçebilirsiniz. Özgeçmişim
 
 ### Özgeçmiş
 
+
 #### 2019:
 
 > * Kafein Yazılım'da Medium Software Developer olarak çalışmaya başladım. Halen burada çalışmalarıma devam etmekteyim.
@@ -31,6 +32,7 @@ Aşağıda yer alan hesap bilgilerimle iletişime geçebilirsiniz. Özgeçmişim
 #### 2015:
 
 > * Marmara Üniversitesi-Bilgisayar Programcılığı bölümünden mezun oldum.
+
 
 ### İlgi Alanları
 
