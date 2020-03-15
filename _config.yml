@@ -4,7 +4,7 @@
 title: Uğur Benli
 
 # Short description of your site
-description: ""
+description: Hadi tanışalım :)
 
 # --- Local development options ---
 # If your website is hosted locally rather than on GitHub, then you need to uncomment the next two parameters to set the url and baseurl
@@ -69,13 +69,13 @@ author:
 # You can reorder the items to define the link order.
 # If you want to add a new link that isn't here, you'll need to also edit the file _data/SocialNetworks.yml
 social-network-links:
-  rss: false
+  #rss: false
   email: "ugurbenli@outlook.com.tr"
+  linkedin: "ugur-benli"
   #facebook: deanattali
   github: ugurbenli
   twitter: ugur__benli
 #  reddit: yourname
-  linkedin: "ugurbenli"
 #  xing: yourname
 #  stackoverflow: "3943160/daattali"
 #  snapchat: deanat78
@@ -88,10 +88,10 @@ social-network-links:
 #  yelp: yourname
 
 footer-links-active:
-  rss: false
+  # rss: false
   # facebook: false
   email: true
-  # twitter: true
+  twitter: true
   github: true
   linkedin: true
   # stackoverflow: true
