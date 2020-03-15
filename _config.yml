@@ -1,10 +1,10 @@
 # --- General options --- #
 
 # Name of website
-title: My website
+title: Uğur Benli - .NET Developer
 
 # Short description of your site
-description: A virtual proof that I'm awesome
+# description: A virtual proof that I'm awesome
 
 # --- Local development options ---
 # If your website is hosted locally rather than on GitHub, then you need to uncomment the next two parameters to set the url and baseurl
@@ -20,15 +20,22 @@ description: A virtual proof that I'm awesome
 
 # List of links in the navigation bar
 navbar-links:
+  en:
+    Blog: "index-en/"
+    About Me: "aboutme-en"
+    #Arama: "search"
+  tr:
+    Blog: ""
+    Hakkımda: "aboutme"
   About Me: "aboutme"
-  Resources:
-    - Beautiful Jekyll: "http://deanattali.com/beautiful-jekyll/"
-    - Learn markdown: "http://www.markdowntutorial.com/"
-  Author's home: "http://ugurbenli.com"
+  # Resources:
+  #   - Beautiful Jekyll: "http://deanattali.com/beautiful-jekyll/"
+  #   - Learn markdown: "http://www.markdowntutorial.com/"
+  # Author's home: "http://ugurbenli.com"
 
 # Image to show in the navigation bar - image must be a square (width = height)
 # Remove this parameter if you don't want an image in the navbar
-avatar: "/img/avatar-icon.png"
+avatar: "/img/profile.jpg"
 
 # If you want to have an image logo in the top-left corner instead of the title text,
 # then specify the following parameter
@@ -60,7 +67,7 @@ footer-link-col: "#404040"
 # Change all these values or delete the ones you don't want.
 # Important: you must keep the "name" parameter, everything else you can remove
 author:
-  name: Some Person
+  name: Uğur Benli
 
 # Select your active Social Network Links.
 # Uncomment the links you want to show in the footer and add your information to each link.
@@ -68,12 +75,12 @@ author:
 # If you want to add a new link that isn't here, you'll need to also edit the file _data/SocialNetworks.yml
 social-network-links:
   rss: true
-  email: "someone@example.com"
-  facebook: deanattali
-  github: daattali
-  twitter: daattali
+  email: "ugurbenli@outlook.com.tr"
+  #facebook: deanattali
+  github: ugurbenli
+  twitter: ugur__benli
 #  reddit: yourname
-#  linkedin: daattali
+  linkedin: "in/ugurbenli"
 #  xing: yourname
 #  stackoverflow: "3943160/daattali"
 #  snapchat: deanat78
@@ -85,6 +92,15 @@ social-network-links:
 #  twitch: yourname
 #  yelp: yourname
 
+footer-links-active:
+  rss: true
+  # facebook: false
+  email: true
+  # twitter: true
+  github: true
+  linkedin: true
+  # stackoverflow: true
+
 # Select which share links to show in posts
 share-links-active:
   twitter: true
@@ -93,7 +109,7 @@ share-links-active:
 
 # How to display the link to the website in the footer
 # Remove this if you don't want a link in the footer
-url-pretty: "MyWebsite.com"  # eg. "deanattali.com/beautiful-jekyll"
+url-pretty: "ugurbenli.com"  # eg. "deanattali.com/beautiful-jekyll"
 
 # --- Web Statistics Section --- #
 
@@ -156,10 +172,10 @@ date_format: "%B %-d, %Y"
 # --- Don't need to touch anything below here (but you can if you want) --- #
 
 # Output options (more information on Jekyll's site)
-timezone: "America/Vancouver"
+timezone: "Europe/Istanbul"
 markdown: kramdown
 highlighter: rouge
-permalink: /:year-:month-:day-:title/
+permalink: /:title/
 paginate: 5
 
 kramdown:
@@ -252,5 +268,50 @@ plugins:
   - jekyll-paginate
   - jekyll-sitemap
 
-# Beautiful Jekyll / Dean Attali
-# 2fc73a3a967e97599c9763d05e564189
+# translations
+
+t:
+  en:
+    next: "NEXT"
+    previous: "PREVIOUS"
+    level: "Level"
+    date: "Date"
+    blog_post: "Blog Posts"
+    talks: "Talks"
+    medium_post: "Medium Posts"
+  tr:
+    next: "SONRAKİ"
+    previous: "ÖNCEKİ"
+    level: "Seviye"
+    date: "Tarih"
+    blog_post: "Blog Yazıları"
+    talks: "Konuşmalar"
+    medium_post: "Medium  Yazıları"
+
+  t_date:
+    en:
+      January: "Jan"
+      February: "Feb"
+      March: "Mar"
+      April: "Apr"
+      May: "May"
+      June: "Jun"
+      July: "Jul"
+      August: "Aug"
+      September: "Sep"
+      October: "Oct"
+      November: "Nov"
+      December: "Dec"
+    tr:
+      January: "Oca"
+      February: "Şub"
+      March: "Mar"
+      April: "Nis"
+      May: "May"
+      June: "Haz"
+      July: "Tem"
+      August: "Ağu"
+      September: "Eyl"
+      October: "Eki"
+      November: "Kas"
+      December: "Ara"
