@@ -23,7 +23,7 @@ navbar-links:
   en:
     Blog: "index-en/"
     About Me: "aboutme-en"
-    #Arama: "search"
+    Arama: "search"
   tr:
     Blog: "index"
     Hakkımda: "aboutme"
