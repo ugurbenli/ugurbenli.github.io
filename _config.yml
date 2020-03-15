@@ -1,7 +1,7 @@
 # --- General options --- #
 
 # Name of website
-title: Uğur Benli - .NET Developer
+title: Uğur Benli Kişisel Web Sitesi
 
 # Short description of your site
 # description: A virtual proof that I'm awesome
@@ -25,13 +25,8 @@ navbar-links:
     About Me: "aboutme-en"
     #Arama: "search"
   tr:
-    Blog: ""
+    Blog: "index"
     Hakkımda: "aboutme"
-  About Me: "aboutme"
-  # Resources:
-  #   - Beautiful Jekyll: "http://deanattali.com/beautiful-jekyll/"
-  #   - Learn markdown: "http://www.markdowntutorial.com/"
-  # Author's home: "http://ugurbenli.com"
 
 # Image to show in the navigation bar - image must be a square (width = height)
 # Remove this parameter if you don't want an image in the navbar
@@ -93,7 +88,7 @@ social-network-links:
 #  yelp: yourname
 
 footer-links-active:
-  rss: true
+  # rss: true
   # facebook: false
   email: true
   # twitter: true
