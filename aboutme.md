@@ -6,8 +6,6 @@ lang: tr
 ref: aboutme-page 
 ---
 
-<center><h2>Uğur Benli</h2></center>
-
 2015 yılında Marmara Üniversitesi Bilgisayar Programcılığı bölümünden mezun oldum. Yazılım dünyasına asıl olarak 2016 yılında Microsoft Yazılım uzmanlığı kursu alarak başladım. Halen İstanbul'da .Net Developer olarak çalışıyorum ve içimdeki öğrenme isteği sona erene kadar ( ki ereceğini düşünmüyorum :) ) bu mesleği severek yapmayı düşünüyorum.
 
 ### İletişim

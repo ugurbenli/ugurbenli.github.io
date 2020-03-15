@@ -21,12 +21,11 @@ description: Kişisel Web Sitesi
 # List of links in the navigation bar
 navbar-links:
   en:
-    Blog: "index-en/"
-    About Me: "aboutme-en"
-    Arama: "search"
+    - Blog: "index-en/"
+    - About Me: "aboutme-en"
   tr:
-    Blog: "index"
-    Hakkımda: "aboutme"
+    - Blog: "index"
+    - Hakkımda: "aboutme"
 
 # Image to show in the navigation bar - image must be a square (width = height)
 # Remove this parameter if you don't want an image in the navbar
@@ -69,7 +68,7 @@ author:
 # You can reorder the items to define the link order.
 # If you want to add a new link that isn't here, you'll need to also edit the file _data/SocialNetworks.yml
 social-network-links:
-  rss: true
+  rss: false
   email: "ugurbenli@outlook.com.tr"
   #facebook: deanattali
   github: ugurbenli
@@ -88,7 +87,7 @@ social-network-links:
 #  yelp: yourname
 
 footer-links-active:
-  # rss: true
+  rss: false
   # facebook: false
   email: true
   # twitter: true
