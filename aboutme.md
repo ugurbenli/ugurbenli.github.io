@@ -12,7 +12,7 @@ ref: aboutme-page
 
 Aşağıda yer alan hesap bilgilerimle iletişime geçebilirsiniz. Özgeçmişimi aşağıdaki linkten indirebilirsiniz.
 
-<a href="/cv/CV-UĞUR BENLİ-TR.docx">CV indir <i class="fas fa-file-download"></i></a>
+<a href="/cv/CV-UĞUR BENLİ-TR.docx">CV indir <i class="fa fa-download" aria-hidden="true"></i></a>
 
 ### Özgeçmiş
 
