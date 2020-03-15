@@ -1,16 +1,47 @@
 ---
-layout: page
-title: About me
-subtitle: Why you'd want to go on a date with me
+layout: aboutpage
+title: Hakkımda
+subtitle:
+lang: tr
+ref: aboutme-page 
 ---
 
-My name is Inigo Montoya. I have the following qualities:
+<center><h2>Uğur Benli</h2></center>
 
-- I rock a great mustache
-- I'm extremely loyal to my family
+2015 yılında Marmara Üniversitesi Bilgisayar Programcılığı bölümünden mezun oldum. Yazılım dünyasına asıl olarak 2016 yılında Microsoft Yazılım uzmanlığı kursu alarak başladım. Halen İstanbul'da .Net Developer olarak çalışıyorum ve içimdeki öğrenme isteği sona erene kadar ( ki ereceğini düşünmüyorum :) ) bu mesleği severek yapmayı düşünüyorum.
 
-What else do you need?
+### İletişim
 
-### my history
+Aşağıda yer alan hesap bilgilerimle iletişime geçebilirsiniz.
 
-To be honest, I'm having some trouble remembering right now, so why don't you just watch [my movie](http://en.wikipedia.org/wiki/The_Princess_Bride_%28film%29) and it will answer **all** your questions.
+### Özgeçmiş
+
+#### 2015:
+
+> * Marmara Üniversitesi-Bilgisayar Programcılığı bölümünden mezun oldum.
+
+#### 2016:
+
+> * Microsoft Yazılım Uzmanlığı kursuna giderek yazılıma asıl girişimi yaptım.
+
+#### 2017:
+
+> * Bilgeadam'da Junior Software Developer olarak çalışmaya başladım.
+
+#### 2019:
+
+> * Kafein Yazılım'da Medium Software Developer olarak çalışmaya başladım. Halen burada çalışmalarıma devam etmekteyim.
+
+### İlgi Alanları
+
+- .Net Core
+- .Net Framework
+- SQL
+- Docker
+- Jenkins
+- Jboss
+- IIS
+- HTML
+- CSS
+- JS
+- TypeScript
