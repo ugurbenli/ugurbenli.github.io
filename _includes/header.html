@@ -35,8 +35,29 @@
 			{% endif %}
 		  {% endif %}
 		  
-		  {% if include.type == "post" %}
-		  <span class="post-meta">Posted on {{ page.date | date: site.date_format }}</span>
+      {% if include.type == "post" %}
+		  <p class="post-meta">
+        <span>{{ site.t[page.lang].post_date }} : </span>
+        <b>
+        {% assign m = page.date | date: "%-m" %}
+          {{ page.date | date: "%-d" }}
+          {% case m %}
+            {% when '1' %}{{ site.t_date[page.lang].January }}
+            {% when '2' %}{{ site.t_date[page.lang].February }}
+            {% when '3' %}{{ site.t_date[page.lang].March }}
+            {% when '4' %}{{ site.t_date[page.lang].April }}
+            {% when '5' %}{{ site.t_date[page.lang].May }}
+            {% when '6' %}{{ site.t_date[page.lang].June }}
+            {% when '7' %}{{ site.t_date[page.lang].July }}
+            {% when '8' %}{{ site.t_date[page.lang].August }}
+            {% when '9' %}{{ site.t_date[page.lang].September }}
+            {% when '10' %}{{ site.t_date[page.lang].October }}
+            {% when '11' %}{{ site.t_date[page.lang].November }}
+            {% when '12' %}{{ site.t_date[page.lang].December }}
+          {% endcase %}
+          {{ page.date | date: "%Y" }}
+        </b>
+      </p>
 		  {% endif %}
         </div>
       </div>
@@ -61,7 +82,28 @@
 		  {% endif %}
 		  
 		  {% if include.type == "post" %}
-		  <span class="post-meta">Posted on {{ page.date | date: site.date_format }}</span>
+		  <p class="post-meta">
+        <span>{{ site.t[page.lang].post_date }} : </span>
+        <b>
+        {% assign m = page.date | date: "%-m" %}
+          {{ page.date | date: "%-d" }}
+          {% case m %}
+            {% when '1' %}{{ site.t_date[page.lang].January }}
+            {% when '2' %}{{ site.t_date[page.lang].February }}
+            {% when '3' %}{{ site.t_date[page.lang].March }}
+            {% when '4' %}{{ site.t_date[page.lang].April }}
+            {% when '5' %}{{ site.t_date[page.lang].May }}
+            {% when '6' %}{{ site.t_date[page.lang].June }}
+            {% when '7' %}{{ site.t_date[page.lang].July }}
+            {% when '8' %}{{ site.t_date[page.lang].August }}
+            {% when '9' %}{{ site.t_date[page.lang].September }}
+            {% when '10' %}{{ site.t_date[page.lang].October }}
+            {% when '11' %}{{ site.t_date[page.lang].November }}
+            {% when '12' %}{{ site.t_date[page.lang].December }}
+          {% endcase %}
+          {{ page.date | date: "%Y" }}
+        </b>
+      </p>
 		  {% endif %}
         </div>
       </div>

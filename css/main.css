@@ -6,6 +6,25 @@ layout: null
 
 /* --- General --- */
 
+html::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+html::-webkit-scrollbar-track {
+  background: #f1f1f1; 
+}
+ 
+/* Handle */
+html::-webkit-scrollbar-thumb {
+  background: #888; 
+}
+
+/* Handle on hover */
+html::-webkit-scrollbar-thumb:hover {
+  background: #555; 
+}
+
 body {
   font-family: 'Lora', 'Times New Roman', serif;
   font-size: 18px;
@@ -17,6 +36,7 @@ body {
   background-attachment: fixed;
   {% endif %}
 }
+
 p {
   line-height: 1.5;
   margin: 30px 0;
@@ -141,7 +161,7 @@ img {
   transition: padding .5s ease-in-out;
 }
 .navbar-custom .navbar-brand-logo img {
-  height: 50px;
+  height: 60px;
   -webkit-transition: height .5s ease-in-out;
   -moz-transition: height .5s ease-in-out;
   transition: height .5s ease-in-out;
@@ -258,6 +278,19 @@ img {
   }
 }
 
+.navbar-active-language {
+  color: rgb(64, 64, 64);
+}
+
+.navbar-inactive-language {
+  color:rgb(99, 99, 99);
+}
+
+.navbar-language-flag {
+  width: 18px;
+  height: 12px;
+}
+
 /* --- Footer --- */
 
 footer {
@@ -310,7 +343,7 @@ footer .theme-by {
 
 .post-preview {
   padding: 20px 0;
-  border-bottom: 1px solid #eee;
+  border-bottom: 2px solid #404040;
 }
 
 @media only screen and (min-width: 768px) {
@@ -381,7 +414,7 @@ footer .theme-by {
 
 @media only screen and (min-width: 768px) {
   .post-preview .post-title {
-    font-size: 36px;
+    font-size: 24px;
   }
 }
 

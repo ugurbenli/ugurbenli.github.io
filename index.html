@@ -2,19 +2,23 @@
 layout: page
 title: Selam, ben Uğur
 lang: tr
-subtitle: Yazılım sevdalısı, gelişime açık ve ortam bağımsızlığını savunan bir developer :)
+subtitle: Sayfama hoş geldiniz, yazılarıma göz atabilir, beni tanımak ve sayfada arama yapmak için yukarıdaki linkleri kullanabilirsiniz 🙂
 use-site-title: true
 ref: index-page
 bigimg:
-- "/img/hover.jpg" : "Wikipedia"   
+- "/img/hover.jpeg" : "Instagram @arnie_chou"   
 ---
-<!-- 
+
 <div class="posts-list container-fluid">
   {% assign posts=site.posts | where:"lang", page.lang %}
+  {% if posts.size > 0 %}
+    <h3>Yazılarım <i class="fa fa-pencil"></i></h3>
+  {% endif %}
+
   {% for post in posts %}
   {% if post.blog %}
   <article class="row post-preview">
-    <span class="col-sm-2 post-date hidden-xs">
+    <span class="col-sm-3 post-date hidden-xs">
       {% assign m = post.date | date: "%-m" %}
       {{ post.date | date: "%-d" }}
       {% case m %}
@@ -33,7 +37,7 @@ bigimg:
       {% endcase %}
       {{ post.date | date: "%Y" }}
     </span>
-    <div class="col-sm-10 col-xs-12">
+    <div class="col-sm-9 col-xs-12">
       <a href="{{ post.url | prepend: site.baseurl }}">
         <span class="post-title">{{ post.title }}</span>
       </a>
@@ -41,4 +45,4 @@ bigimg:
   </article>
   {% endif %}
   {% endfor %}
-</div> -->
+</div> 

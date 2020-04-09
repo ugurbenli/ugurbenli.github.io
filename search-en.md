@@ -1,8 +1,8 @@
 ---
 layout: page
-title: Site İçinde Arama
-subtitle: İstediğiniz anahtar kelimelerle site içerisinde arama yapabilirsiniz.
-lang: tr
+title: Site Search
+subtitle: You can search any keywords in my site via below searchbox
+lang: en
 ---
 
 <div>

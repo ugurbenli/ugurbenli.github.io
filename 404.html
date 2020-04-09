@@ -1,13 +1,31 @@
 ---
 layout: default
-title: 404 - Page not found
 permalink: /404.html
 ---
 
 <div class="text-center">
-  <h1>Whoops, this page doesn't exist.</h1>
-  <h1>Move along. (404 error)</h1>
-  <br/>
- 
+  <h3 id="404-head"></h3>
+  <span id="404-content"></span>
+  <p>
+    <a href="javascript:window.history.back();" class="btn btn-danger">
+      <i class="fa fa-arrow-circle-left"></i> &nbsp; <span id="404-back"></span>
+    </a>
+  </p>
   <img src="{{ 'img/404-southpark.jpg' | relative_url }}" />
 </div>
+
+<script type="text/javascript">
+  (function () {
+    if (window.getLocalLanguage() === "tr") {
+      document.title = "{{ site.t['tr'].error.title }}";
+      document.getElementById("404-head").innerHTML = "{{ site.t['tr'].error.head }}";
+      document.getElementById("404-content").innerHTML = "{{ site.t['tr'].error.content }}";
+      document.getElementById("404-back").innerHTML = "{{ site.t['tr'].error.back }}";
+    } else {
+      document.title = "{{ site.t['en'].error.title }}";
+      document.getElementById("404-head").innerHTML = "{{ site.t['en'].error.head }}";
+      document.getElementById("404-content").innerHTML = "{{ site.t['en'].error.content }}";
+      document.getElementById("404-back").innerHTML = "{{ site.t['en'].error.back }}";
+    }
+  })();
+</script>

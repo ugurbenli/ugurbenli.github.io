@@ -8,58 +8,179 @@
         <span class="icon-bar"></span>
       </button>
       {%- if site.title-img -%}
-        <a class="navbar-brand navbar-brand-logo" href="{{ '' | absolute_url }}"><img src="{{ site.title-img }}"/></a>
+      <a class="navbar-brand navbar-brand-logo" href="{{ '' | absolute_url }}"><img src="{{ site.title-img }}" /></a>
       {%- else -%}
-        <a class="navbar-brand" href="{{ '' | absolute_url }}">{{ site.title }}</a>
+      <a class="navbar-brand" href="{{ '' | absolute_url }}">{{ site.title }}</a>
       {%- endif -%}
     </div>
 
     <div class="collapse navbar-collapse" id="main-navbar">
       <ul class="nav navbar-nav navbar-right">
-      {%- for link in site.navbar-links -%}
+        {%- for link in site.navbar-links -%}
         {%- if link[1].first %}
-          <li class="navlinks-container">
-            <a class="navlinks-parent" href="javascript:void(0)">{{ link[0] }}</a>
-            <div class="navlinks-children">
-              {%- for childlink in link[1] -%}
-              {%- for linkparts in childlink %}
-              <a href="{{ linkparts[1] | relative_url }}">{{ linkparts[0] }}</a>
-              {%- endfor -%}
-              {%- endfor %}
-            </div>
-          </li>
+        <li class="navlinks-container">
+          <a class="navlinks-parent" href="javascript:void(0)">{{ link[0] }}</a>
+          <div class="navlinks-children">
+            {%- for childlink in link[1] -%}
+            {%- for linkparts in childlink %}
+            <a href="{{ linkparts[1] | relative_url }}">{{ linkparts[0] }}</a>
+            {%- endfor -%}
+            {%- endfor %}
+          </div>
+        </li>
         {% else %}
-          <li><a href="{{ link[1] | relative_url }}">{{ link[0] }}</a></li>
+        <li><a href="{{ link[1] | relative_url }}">{{ link[0] }}</a></li>
         {%- endif -%}
-      {%- endfor -%}
-      {% if site.nav-search %}
-      <li>
-        <a href="{{ site.baseurl }}/{{ site.nav-search }}" class="nav-search-link" title="Search">
-          <span class="fa fa-search nav-search-icon"></span>
-        <span class="nav-search-text"></span>
-        </a>
-      </li>
-      {% endif %}
+        {%- endfor -%}
+        {% if page.lang == "en" %}
+        <li>
+          <a href="{{'aboutme-en'|absolute_url}}" id="whoiam" title="Who Am I">Who Am I</a>
+        </li>
+        <li>
+          <a class="navbar-brand navbar-inactive-language navbar-language" href="/index" title="TR">TR
+            <img class="navbar-language-flag" src="..\img\lang\turkey-flag-icon-16.png" title="TR" />
+          </a>
+          <a class="navbar-brand" href="javascript:void">|</a>
+          <a class="navbar-brand navbar-active-language navbar-language" href="/index-en" title="EN">EN
+            <img class="navbar-language-flag" src="..\img\lang\united-kingdom-flag-icon-16.png" title="EN" />
+          </a>
+        </li>
+        {% if site.nav-search %}
+        <li>
+          <a href="{{'search-en'|absolute_url}}" class="nav-search-link" title="Search" id="search">
+            <span class="fa fa-search nav-search-icon"></span>
+            <span class="nav-search-text"></span>
+          </a>
+        </li>
+        {% endif %}
+        {% else %}
+        <li>
+          <a href="{{'aboutme'|absolute_url}}" id="whoiam" title="Ben Kimim">Ben Kimim</a>
+        </li>
+        <li>
+          <a class="navbar-brand navbar-active-language navbar-language" href="/index" title="TR">TR
+            <img class="navbar-language-flag" src="..\img\lang\turkey-flag-icon-16.png" title="TR" /></a>
+          <a class="navbar-brand" href="javascript:void">|</a>
+          <a class="navbar-brand navbar-inactive-language navbar-language" href="/index-en" title="EN">EN
+            <img class="navbar-language-flag" src="..\img\lang\united-kingdom-flag-icon-16.png" title="EN" />
+          </a>
+        </li>
+        {% if site.nav-search %}
+        <li>
+          <a href="{{'search'|absolute_url}}" class="nav-search-link" title="Ara" id="search">
+            <span class="fa fa-search nav-search-icon"></span>
+            <span class="nav-search-text"></span>
+          </a>
+        </li>
+        {% endif %}
+        {% endif %}
       </ul>
     </div>
 
-	{% if page.image and (layout.show-avatar or page.show-avatar) %}
-	<div class="avatar-container">
-	  <div class="avatar-img-border">
-	    <a href="{{ '' | absolute_url }}">
-	      <img class="avatar-img" src="{{ page.image | relative_url }}" />
-		</a>
-	  </div>
-	</div>
-	{% elsif site.avatar and (layout.show-avatar or page.show-avatar) %}
-	<div class="avatar-container">
-	  <div class="avatar-img-border">
-	    <a href="{{ '' | absolute_url }}">
-	      <img class="avatar-img" src="{{ site.avatar | relative_url }}" />
-		</a>
-	  </div>
-	</div>
-	{% endif %}
+    {% if page.image and (layout.show-avatar or page.show-avatar) %}
+    <div class="avatar-container">
+      <div class="avatar-img-border">
+        <a href="{{ '' | absolute_url }}">
+          <img class="avatar-img" src="{{ page.image | relative_url }}" />
+        </a>
+      </div>
+    </div>
+    {% elsif site.avatar and (layout.show-avatar or page.show-avatar) %}
+    <div class="avatar-container">
+      <div class="avatar-img-border">
+        <a href="{{ '' | absolute_url }}">
+          <img class="avatar-img" src="{{ site.avatar | relative_url }}" />
+        </a>
+      </div>
+    </div>
+    {% endif %}
 
   </div>
 </nav>
+
+<script type="text/javascript">
+  (function () {
+    if (typeof (Storage) !== "undefined") {
+
+      //#region Default Language
+
+      var localLang = getLocalLanguage();
+
+      if (localLang === undefined || localLang === null) {
+        setLocalLanguage();
+        localLang = getLocalLanguage();
+      }
+
+      //#endregion Default Language
+
+      //#region Nav Language Change Listener
+
+      var languages = document.getElementsByClassName('navbar-language');
+
+      for (let index = 0; index < languages.length; index++) {
+        languages[index].addEventListener('click', function (e) {
+          var lang = e.target.title.toLowerCase();
+
+          if (localLang !== undefined || localLang !== null || localLang !== "") {
+            removeLocalLanguage();
+          }
+
+          setLocalLanguage(lang);
+        }, false);
+      }
+
+      //#endregion Nav Language Change Listener
+
+      //#region Nav Link Set if Page Lang is Null  
+
+      var pageLang = "{{ page.lang }}";
+
+      if (pageLang === undefined || pageLang === null || pageLang === "") {
+
+        var whoIAmAnchor = document.getElementById("whoiam");
+        var searchAnchor = document.getElementById("search");
+
+        if (localLang === "tr") {
+          whoIAmAnchor.innerHTML = "{{ site.t['tr'].navlink.whoAmI.title }}";
+          whoIAmAnchor.title = "{{ site.t['tr'].navlink.whoAmI.title }}";
+          whoIAmAnchor.href = "{{ site.t['tr'].navlink.whoAmI.link }}";
+
+          searchAnchor.href = "{{ site.t['tr'].navlink.search.link }}";
+          searchAnchor.title = "{{ site.t['tr'].navlink.search.title }}";
+        } else {
+          whoIAmAnchor.innerHTML = "{{ site.t['en'].navlink.whoAmI.title }}";
+          whoIAmAnchor.title = "{{ site.t['en'].navlink.whoAmI.title }}";
+          whoIAmAnchor.href = "{{ site.t['en'].navlink.whoAmI.link }}";
+
+          searchAnchor.href = "{{ site.t['en'].navlink.search.link }}";
+          searchAnchor.title = "{{ site.t['en'].navlink.search.title }}";
+        }
+      }
+
+      //#endregion Nav Link Set for Lang 
+
+    } else {
+      alert("Desteklenmeyen browser / Unsupported browser");
+    }
+  })();
+
+  //#region Global Functions
+
+  function getLocalLanguage() {
+    var lang = localStorage.getItem("local_lang");
+    return lang;
+  }
+
+  function setLocalLanguage(lang) {
+    if (lang === "" || lang === undefined || lang === null)
+      lang = 'tr';
+
+    localStorage.setItem("local_lang", lang);
+  }
+
+  function removeLocalLanguage() {
+    localStorage.removeItem("local_lang");
+  }
+
+  //#endregion Global Functions
+</script>
