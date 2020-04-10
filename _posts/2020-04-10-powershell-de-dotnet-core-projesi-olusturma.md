@@ -16,17 +16,19 @@ Konumuza geri dönersek, .Net'i hep ***Visual Studio*** ortamında kullanmaya al
 
 Bu yazımızdaki adımlarımız basitçe şunlar olacak;
 
-- Projemiz için öncelikle bir Solution(SLN) dosyası oluşturacağız. Bu bilmeyenler için kısaca projelerimizin ana sarıcısıdır, yani bu dosyaya proje dosyalarımızı, paket dosyalarımızı vb. bağlarız.
-- .Net Core Web API projesi oluşturacağız.
-- Oluşturduğumuz Solution(SLN)'a oluşturduğumuz Web API projesini dahil edeceğiz.
+* Projemiz için öncelikle bir Solution(SLN) dosyası oluşturacağız. Bu bilmeyenler için kısaca projelerimizin ana sarıcısıdır, yani bu dosyaya proje dosyalarımızı, paket dosyalarımızı vb. bağlarız.
+* Web API projesi oluşturacağız.
+* Oluşturduğumuz solutiona oluşturduğumuz Web API projesini ekleyeceğiz.
 
-Öncelikle bilgisayarınızda .Net Core yüklü olduğundan emin olun. Ben console olarak ***PowerShell*** kullanacağım. Kolaylık olarak ***VS Code*** içerisinde yer alan ***PowerShell***'i kullanabiliriz. Komutlarla ilgili detaylı bilgiyi isterseniz ***PowerShell***'den isterseniz de web sitesi üzerinden alabilirsiniz. 
+> Öncelikle bilgisayarınızda .Net Core yüklü olduğundan emin olun. Bilgisayarınızda .Net Core'un olmadığını öğrenmek için `dotnet --version` komutunu kullanabilirsiniz. 
+
+Ben console olarak ***PowerShell*** kullanacağım. Kolay olması için ***VS Code*** içerisinde yer alan ***PowerShell***'i kullanabiliriz. Komutlarla ilgili detaylı bilgiyi isterseniz ***PowerShell***'den ya da yukarıda belirttiğim web sitesi üzerinden alabilirsiniz. 
 
 Powershell'de detaylı bilgi almak için;
 
 `dotnet <<komut>> --help`
 
-#### Solution(SLN) Dosyası Oluşturma
+#### Solution Dosyası Oluşturma
 
 Solution dosyamızı aşağıdaki komutla oluşturuyoruz. İsmini ise `--name` parametresiyle verebiliyoruz. Burada ben **DotnetCoreApiVsCodeExample** ismini verdim.
 
@@ -38,9 +40,9 @@ Web Api projesi olarak da Microsoft'un bize örnek olarak verdiği API'yi oluşt
 
 `dotnet new webapi --name DotnetCoreApiVsCodeExample.API`
 
-#### SLN içine projemizi dahil etme
+#### Solution içine projemizi dahil etme
 
-İşte son adımımıza geldik. Şu aşamada sln ve projemizin birbirinden haberi yok. Bu arkadaşları haberdar etmek lazım 🙂 Bunun için şu komutu kullanıyoruz ve artık birbirlerini öğreniyorlar.
+İşte son adımımıza geldik. Şu aşamada solution ve projemizin birbirinden haberi yok. Bu arkadaşları haberdar etmek lazım 🙂 Bunun için şu komutu kullanıyoruz ve artık birbirlerini öğreniyorlar.
 
 `dotnet sln .\DotnetCoreApiVsCodeExample.sln add .\DotnetCoreApiVsCodeExample.API\`
 
