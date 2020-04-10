@@ -8,7 +8,11 @@ tags: [powershell, vs code, dotnet core, .net core]
 
 Merhabalar,
 
-Sizlere ilk blog yazımda .Net Core'dan bahsetmek istedim. .Net Core kısaca; Microsoft tarafından geliştirilen açık kaynaklı, ortam bağımsızlığını destekleyen bir ***SDK***'dır. Aranızda .Net Core ile ilgili bilgi sahibi olmayan varsa hemen şu [linkten](https://docs.microsoft.com/tr-tr/dotnet/core/ ".NET Core Documentation"){:target="_blank"} detaylı bilgi sahibi olabilir.
+Sizlere ilk blog yazımda .Net Core'dan bahsetmek istedim.
+ 
+> .Net Core kısaca; Microsoft tarafından geliştirilen açık kaynaklı, ortam bağımsızlığını destekleyen bir ***SDK***'dır.
+ 
+Aramızda .Net Core ile ilgili bilgi sahibi olmayan varsa hemen şu [linkten](https://docs.microsoft.com/tr-tr/dotnet/core/ ".NET Core Documentation"){:target="_blank"} detaylı bilgi sahibi olabilir.
 
 ![.Net Core](/img/2020-04-10-powershell-de-dotnet-core-projesi-olusturma/netcore.png ".Net Core")
 
@@ -24,7 +28,7 @@ Bu yazımızdaki adımlarımız basitçe şunlar olacak;
 
 Ben console olarak ***PowerShell*** kullanacağım. Kolay olması için ***VS Code*** içerisinde yer alan ***PowerShell***'i kullanabiliriz. Komutlarla ilgili detaylı bilgiyi isterseniz ***PowerShell***'den ya da yukarıda belirttiğim web sitesi üzerinden alabilirsiniz. 
 
-Powershell'de detaylı bilgi almak için;
+***PowerShell***'de detaylı bilgi almak için;
 
 `dotnet <<komut>> --help`
 
