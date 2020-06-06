@@ -45,38 +45,7 @@ Açıkça doküman yazılamıyorsa, en azından kod içerisine summary (özet) a
 
 Örneğin aşağıdaki şekilde açıklamalar betimleyici olabilir.
 
-~~~c#
-
-/// <summary>
-/// This class introduces methods for four operations.
-/// Addition, Subtraction, Multiplication, Division
-/// </summary>
-public class FourOperation
-{
-    /// <summary>
-    /// This method performs addition.
-    /// <param name="int1">First integer for addition.</param>
-    /// <param name="int2">Second integer for addition.</param>
-    /// </summary>
-    public int Addition(int int1, int int2)
-    {
-        return int1 + int2;
-    }
-
-    /// <summary>
-    /// This method performs subtraction.
-    /// <param name="int1">First integer for subtraction.</param>
-    /// <param name="int2">Second integer for subtraction.</param>
-    /// </summary>
-    public int Subtraction(int int1, int int2)
-    {
-        return int1 - int2;
-    }
-
-    ...
-}
-
-~~~
+<script src="https://gist.github.com/ugurbenli/22747621c870a4b2ddd1643f7eb5036e.js"></script>
 
 API projeleri için kod içindeki notlara hayat kazandıran bir teknoloji mevcut. Bundan bir önceki yazımda bahsettim, oradan inceleyerek projelerinize betimleyici bir anlatım katabilirsiniz.
 
